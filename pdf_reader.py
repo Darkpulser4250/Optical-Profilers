@@ -51,5 +51,5 @@ def pdf_extracter(fileName):
     
     
 if __name__ == "__main__":
-    pdf_extracter("vr_app.pdf")
-    # app.run(debug=True)
+    # pdf_extracter("vr_app.pdf")
+    app.run(debug=True)
