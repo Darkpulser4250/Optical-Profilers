@@ -1,6 +1,7 @@
 import os
 from PyPDF2 import PdfFileReader, PdfFileWriter
 from flask import Flask, render_template, request, redirect
+import database_ops
 
 
 # add flask
@@ -49,6 +50,7 @@ def pdf_extracter(fileName):
             f.truncate(0)
             print("Truncating.....COMPLETE!!!")
     
+database_ops.download_file("key");
     
 if __name__ == "__main__":
     pdf_extracter("vr_app.pdf")
