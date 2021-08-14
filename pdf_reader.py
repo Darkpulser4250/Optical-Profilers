@@ -49,8 +49,7 @@ def pdf_extracter(fileName):
         with open("notes.txt", 'r+') as f:
             f.truncate(0)
             print("Truncating.....COMPLETE!!!")
-    
-database_ops.download_file("key");
+
     
 if __name__ == "__main__":
     pdf_extracter("vr_app.pdf")
