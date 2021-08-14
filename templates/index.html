@@ -1,6 +1,22 @@
 <!DOCTYPE html>
   <html>
     <head>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+    $(function(){
+      $("#uploadPage").load("upload.html"); 
+    });
+    </script>
+    <script> 
+    $(function(){
+      $("#queryPage").load("query.html"); 
+    });
+    </script>
+    <script> 
+    $(function(){
+      $("#aboutPage").load("about.html"); 
+    });
+    </script>
       <!--Import Google Icon Font-->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
 
@@ -22,16 +38,12 @@
                   <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                    <ul class="right hide-on-med-and-down">
                     <li>
-                      <a href="index.html">Home</a>
                     </li>
                     <li>
-                      <a href="upload.html">Upload</a>
                     </li>
                     <li>
-                      <a href="query.html">Query</a>
                     </li>
                     <li>
-                      <a href="about.html">About</a>
                     </li>                    
                   </ul>
                 </div>
@@ -47,7 +59,6 @@
         <div class="caption center-align">
           <h2>Upload</h2>
           <h5 class="light grey-text text-lighten-3 hide-on-small-only">Upload your files and images for classification</h5>
-          <a href="upload.html" class="btn btn-large">Upload</a>
         </div>
       </li>
       <li>
@@ -55,7 +66,6 @@
         <div class="caption left-align">
           <h2>Query</h2>
           <h5 class="light grey-text text-lighten-3 hide-on-small-only">Find the documents you posted</h5>
-          <a href="query.html" class="btn btn-large">Query</a>
         </div>
       </li>
       <li>
@@ -63,7 +73,6 @@
         <div class="caption right-align">
           <h2>About</h2>
           <h5 class="light grey-text text-lighten-3 hide-on-small-only">Learn how we implement</h5>
-          <a href="about.html" class="btn btn-large">About</a>
         </div>
       </li>
     </ul>

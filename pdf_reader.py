@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('UI.html')
+    return render_template('index.html')
 
 def pdf_extracter(fileName):
     filesize = os. path. getsize("notes.txt") 
