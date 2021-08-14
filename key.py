@@ -19,4 +19,4 @@ vr_doc = ["Texas Voter Registration Application",
           "a fine up to $2,000"]
 
 # Application for Ballot by Mail
-ballot = []
+ballot = [""]

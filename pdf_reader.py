@@ -2,15 +2,7 @@ import os
 from PyPDF2 import PdfFileReader, PdfFileWriter
 from flask import Flask, render_template, request, redirect
 
-
-# add flask
-app = Flask(__name__)
-
-
-@app.route('/')
-def index():
-    return render_template('UI.html')
-
+# File Extraction Code
 def pdf_extracter(fileName):
     filesize = os. path. getsize("notes.txt") 
     if filesize == 0: 
@@ -48,6 +40,29 @@ def pdf_extracter(fileName):
         with open("notes.txt", 'r+') as f:
             f.truncate(0)
             print("Truncating.....COMPLETE!!!")
+
+
+# add flask
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/upload')
+def upload():
+    return render_template('upload.html')
+
+@app.route('/upload',methods=['POST'])
+def upload_fileName():
+    file = request.files['inputFile']
+    pdf_extracter(file.filename)
+
+    return 'extractor completed'
+
+
+
     
     
 if __name__ == "__main__":
