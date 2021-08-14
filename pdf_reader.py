@@ -12,6 +12,28 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route("/index.html")
+def home():
+    return render_template("index.html")
+
+@app.route("/upload.html", methods=["GET", "POST"])
+def upload():
+    if request.method == "POST":
+        if request.files:
+            image = request.files["image"]
+            return redirect(request.url)
+    return render_template("upload.html")
+
+@app.route("/query.html", methods=["GET", "POST"])
+def query():
+    return render_template("query.html")
+
+@app.route("/about.html", methods=["GET", "POST"])
+def about():
+    return render_template("about.html")
+
+
+
 def pdf_extracter(fileName):
     filesize = os. path. getsize("notes.txt") 
     if filesize == 0: 
