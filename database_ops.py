@@ -2,8 +2,11 @@
 # pip install awscli
 # aws configure
 
-# **contact xavier for credentials** OR 
-# if youre the new team create a bucket named identidocdocumentclassifier in AWS s3.
+# **contact admin(Xavier Wells) for credentials** 
+# OR 
+# if youre the new team create a bucket named 
+# identidocdocumentclassifier(or change BUCKETNAME to name of your bucket) in AWS s3.
+
 # After doing that, setup an IAM user with the perms you need.
 
 import boto3
